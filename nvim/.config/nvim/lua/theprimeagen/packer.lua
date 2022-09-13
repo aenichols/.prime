@@ -10,6 +10,11 @@ return require("packer").startup(function()
     use("nvim-lua/popup.nvim")
     use("nvim-telescope/telescope.nvim")
 
+    use({
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    })
+
     -- All the things
     use("neovim/nvim-lspconfig")
     use("hrsh7th/cmp-nvim-lsp")
@@ -22,6 +27,13 @@ return require("packer").startup(function()
     use("simrat39/symbols-outline.nvim")
     use("L3MON4D3/LuaSnip")
     use("saadparwaiz1/cmp_luasnip")
+
+    -- Testing out jupyter ascending
+    use('untitled-ai/jupyter_ascending.vim')
+    use('bfredl/nvim-ipy')
+    use('hkupty/iron.nvim')
+    use('GCBallesteros/jupytext.vim')
+    use('GCBallesteros/vim-textobj-hydrogen')
 
     -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")
